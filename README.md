@@ -1,0 +1,67 @@
+Locales for VanillaAddons
+=========================
+
+Vanilla アドオン用の日本語言語ファイルを管理します。
+
+プラグインの言語ファイルには、以下の 2 形式の提供方法があります。
+
+* `/plugins/{Plugin-folder}/locale/{LocaleName}.php`
+* `/plugins/{Plugin-folder}/locale/{LocaleName}/definitions.php`
+
+プラグイン側に既に locale ディレクトリが存在している場合は、その形式に従います。
+
+それ以外は、
+
+    /plugins/{Plugin-folder}/locale/{LocaleName}.php
+
+形式になっています。
+
+テーマの言語ファイルは以下の 1 形式になります。
+
+    /themes/{Theme-folder}/locale/{LocaleName}.php
+
+各言語ファイルの翻訳対象は、Garden フレームワークの翻訳機能 (T() 関数) を利用しているコードに限られます。
+それ以外の箇所は対象外です（例. CLEditor のツールバー）。
+
+収録アドオン
+------------
+
+以下のアドオンを日本語化しています。
+
+* Plugins
+  * [Mark All Viewed](http://vanillaforums.org/addon/allviewed-plugin) 1.1
+  * [About Me](http://vanillaforums.org/addon/579-about-me) 1.0
+  * [Addon Manager](http://vanillaforums.org/addon/addonmanager-plugin) 0.2.0
+  * [<Embed> Vanilla](http://vanillaforums.org/addon/embedvanilla-plugin) 1.0.1
+  * [Locale Developer](http://vanillaforums.org/addon/localedeveloper-plugin) 1.1
+  * [ReplyTo](http://vanillaforums.org/addon/replyto-plugin) 0.1.8
+  * [WhosOnline](http://vanillaforums.org/addon/whosonline-plugin) 1.3
+* Themes
+  * EmbedFriendly 1.0
+
+
+使い方
+------
+
+各アドオンのディレクトリに、日本語言語ファイルを含む locale フォルダを
+コピー (フォルダがすでにあれば上書き) してください。
+
+その後、`cache/locale_map.ini` を削除してください (忘れると、翻訳が反映
+されない場合があります)。
+
+
+未翻訳箇所を見つけたら
+----------------------
+
+* 協力者登録依頼をいただければ、登録します。リポジトリを直接更新してください。
+* またはフォークして更新し、プルリクエストを送ってください。
+* または課題 (issues) に報告してください。
+
+いずれも GitHub のアカウントが必要です。
+
+ただし、アドオン側で翻訳コードが提供されていない場合は、翻訳できません。
+
+翻訳目的でアドオンをハックすることは、原則として行っていません。
+
+またアドオンの作者に対して翻訳コードを提供するよう働きかける代行も、
+原則として行っていません。
